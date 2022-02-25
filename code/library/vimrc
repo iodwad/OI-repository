@@ -1,0 +1,21 @@
+"vimrc by iodwad
+autocmd BufNewFile *.cpp 0r ~/.cpp
+colorscheme ron
+
+set number
+set mouse=a
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set autoindent
+set cindent
+set autoread
+set showcmd
+
+map <F8> :vsp %<.out<Enter><C-w>L:sp %<.in<Enter><C-w><C-w><C-w><C-w>60<C-w>>
+map <F9> :!g++ -o %< %<.cpp -g -Wall -fsanitize=address -fsanitize=undefined<Enter>
+map <F12> :!time ./%<<Enter>
+
+"for wsl
+map "y : !/mnt/c/Windows/System32/clip.exe<cr>u
+map "p :read !/mnt/c/Windows/System32/paste.exe <cr>i<bs><esc>l
